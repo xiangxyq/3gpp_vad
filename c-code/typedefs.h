@@ -159,6 +159,7 @@ typedef int Bool;
 /*
  ********* Check current platform
  */
+#if 0
 #if defined(__MSDOS__)
 #define PC
 #define PLATFORM "PC"
@@ -178,5 +179,7 @@ typedef int Bool;
 #else
 #error "can't determine architecture; adapt typedefs.h to your platform"
 #endif
+#endif
+
 
 #endif

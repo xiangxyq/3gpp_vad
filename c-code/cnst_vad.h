@@ -37,8 +37,11 @@
 #define ALPHA5      (Word16)((1.0 - 0.5)*MAX_16)   /* For stationary estimation */
 
 /* Constants for VAD threshold */
-#define VAD_THR_HIGH 1260 /* Highest threshold                 */
-#define VAD_THR_LOW  720  /* Lowest threshold                  */
+//#define VAD_THR_HIGH 1260 /* Highest threshold                 */
+//#define VAD_THR_LOW  720  /* Lowest threshold                  */
+#define VAD_THR_HIGH 2500 /* Highest threshold                 */
+#define VAD_THR_LOW  1500  /* Lowest threshold                  */
+
 #define VAD_P1 0          /* Noise level for highest threshold */
 #define VAD_P2 6300       /* Noise level for lowest threshold  */
 #define VAD_SLOPE (Word16)(MAX_16*(float)(VAD_THR_LOW-VAD_THR_HIGH)/(float)(VAD_P2-VAD_P1))
@@ -52,9 +55,11 @@
 #define STAT_THR 1000         /* Threshold for stationarity detection              */
 
 /* Limits for background noise estimate */
-#define NOISE_MIN 40          /* minimum */
+//#define NOISE_MIN 40          /* minimum */
+#define NOISE_MIN 350          /* minimum */
 #define NOISE_MAX 16000       /* maximum */
-#define NOISE_INIT 150        /* initial */
+//#define NOISE_INIT 150        /* initial */
+#define NOISE_INIT 450        /* initial */
 
 /* Constants for VAD hangover addition */
 #define HANG_NOISE_THR 100
